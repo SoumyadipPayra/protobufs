@@ -1,0 +1,26 @@
+syntax = "proto3";
+package protobufs.proto.cppcompiler;
+
+option go_package = "github.com/SoumyadipPayra/protobufs/go-protos/cpp_compiler";
+
+service CPPCompiler {
+    rpc PingPong (PingRequest) returns (PingResponse) {}
+    rpc CompileAndRun (CompileAndRunRequest) returns (CompileAndRunResponse) {}
+}
+
+message PingRequest {
+    string msg = 1;
+}
+
+message PingResponse {
+    string msg = 1;
+}
+
+message CompileAndRunRequest {
+    string filePath = 1;
+    bytes fileData = 2; 
+}
+
+message CompileAndRunResponse {
+    bytes logs = 2;
+}
