@@ -17,9 +17,9 @@ message PingResponse {
 }
 
 message CompileAndRunRequest {
-    string userName = 1;
-    string filePath = 2;
-    bytes fileData = 3; 
+    string user_name = 1;
+    string file_path = 2;
+    bytes file_data = 3; 
 }
 
 message CompileAndRunResponse {
